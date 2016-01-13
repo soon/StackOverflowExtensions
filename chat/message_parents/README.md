@@ -17,4 +17,4 @@ Message Parents Popup Extension (Proof of Concept)
 3. Use `Up` and `Down` in order to select appropriate message
 4. Press `Tab` in order to use selected message
 
-![](http://i.imgur.com/MlUokyX.gif)
+![](http://i.stack.imgur.com/mD7jR.gif)
