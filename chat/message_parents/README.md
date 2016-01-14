@@ -5,10 +5,7 @@ Message Parents Popup Extension (Proof of Concept)
 
 ### Initialization: 
 
-1. Copy `message_parents_popup.js` content
-2. Open Stack Overflow chat room 
-3. Open Developer console
-4. Execute the script using the developer console
+Just follow [TamperMonkey](http://tampermonkey.net/) instructions
 
 ### Use case
 
