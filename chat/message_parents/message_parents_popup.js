@@ -68,11 +68,11 @@ var moveParentMessageSelectionDown = function() {
     getParentMessagesPopup().find(".reply-parent").next().addClass("reply-parent").prev().removeClass("reply-parent");
 } 
 
-getIdOfSelectedParentMessage = function() {
+var getIdOfSelectedParentMessage = function() {
     return getParentMessagesPopup().find(".reply-parent")[0].id.split('-')[1];
 }
 
-replaceUserNameWithSelectedParentMessageAndClosePopup = function() {
+var replaceUserNameWithSelectedParentMessageAndClosePopup = function() {
     var input = document.getElementById('input');
     var parentId = getIdOfSelectedParentMessage();
     input.value = input.value.replace(/^\s*(\@[\wа-яё]+)/i, ":" + parentId);
