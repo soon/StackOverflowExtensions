@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name Reply to a chat message using only keyboard
-// @description Converts tag-like badge comments to badges
+// @description Allows user to select parent message for a particular user with keyboard only
 // @version 0.1
 // @namespace http://meta.stackexchange.com/q/272908
 // @match *://chat.stackexchange.com/rooms/*
