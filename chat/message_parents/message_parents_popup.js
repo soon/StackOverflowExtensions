@@ -1,3 +1,15 @@
+// ==UserScript==
+// @name Reply to a chat message using only keyboard
+// @description Converts tag-like badge comments to badges
+// @version 0.1
+// @match *://chat.stackexchange.com/rooms/*
+// @match *://chat.stackoverflow.com/rooms/*
+// @match *://chat.meta.stackexchange.com/rooms/*
+// @author soon
+// @run-at document-end
+// ==/UserScript==
+
+
 var getUserNameFromContainer = function(c) { 
     return normalizeUserName(c.querySelector(".username").textContent); 
 }
