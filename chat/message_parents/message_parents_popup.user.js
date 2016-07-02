@@ -89,7 +89,7 @@ var getIdOfSelectedParentMessage = function() {
 var replaceUserNameWithSelectedParentMessageAndClosePopup = function() {
     var input = document.getElementById('input');
     var parentId = getIdOfSelectedParentMessage();
-    input.value = input.value.replace(/^\s*(\@[\wа-яё]+)/i, ":" + parentId);
+    input.value = input.value.replace(/^\s*(\@[\wа-яё.-]+)/i, ":" + parentId);
     closeParentMessagesPopup();
 };
 
