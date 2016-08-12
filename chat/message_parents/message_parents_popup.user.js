@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Reply to a chat message using only keyboard
 // @description Allows user to select parent message for a particular user with keyboard only
-// @version 0.1
+// @version 0.2
 // @namespace http://meta.stackexchange.com/q/272908
 // @match *://chat.stackexchange.com/rooms/*
 // @match *://chat.stackoverflow.com/rooms/*
@@ -95,26 +95,26 @@ var replaceUserNameWithSelectedParentMessageAndClosePopup = function() {
 
 document.getElementById('input').addEventListener('keydown', function (e) {
     if(!isParentMessagesPopupOpen()) {
-        if(e.keyIdentifier == 'U+0020' && e.ctrlKey) {
+        if(e.key == ' ' && e.ctrlKey) {
             var username = getUserNameFromNewMessage();
-            if(username != null) {
+            if(username !== null) {
                 openParentMessagesPopup(username);
             }
         }
     } else {
-        if(e.keyIdentifier == 'Up') {
+        if(e.key == 'ArrowUp') {
             moveParentMessageSelectionUp();
             event.preventDefault();
             return false;
-        } else if(e.keyIdentifier == 'Down') {
+        } else if(e.key == 'ArrowDown') {
             moveParentMessageSelectionDown();
             event.preventDefault();
             return false;
-        } else if(["Enter", "U+0009"].indexOf(e.keyIdentifier) >= 0) {
+        } else if(["Enter", "Tab"].indexOf(e.key) >= 0) {
             replaceUserNameWithSelectedParentMessageAndClosePopup();
             event.preventDefault();
             return false;
-        } else if (e.keyIdentifier == "U+001B") {
+        } else if (e.key == "U+001B") {
             closeParentMessagesPopup();
             event.preventDefault();
             return false;
